@@ -13,11 +13,11 @@ class UserAdmin(BaseUserAdmin):
     ordering = ['id']
     list_display = ['email', 'name']
     fieldsets = (
-        (None, {'fields':('email', 'password')}),
+        (None, {'fields': ('email', 'password')}),
         (
             _('Permissions'),
             {
-                'fields':(
+                'fields': (
                     'is_active',
                     'is_staff',
                     'is_superuser',
@@ -27,7 +27,7 @@ class UserAdmin(BaseUserAdmin):
         (
             _('Important dates'),
             {
-                'fields':('last_login',)
+                'fields': ('last_login',)
             }
         ),
     )
@@ -35,7 +35,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields':(
+            'fields': (
                 'email',
                 'password1',
                 'password2',
