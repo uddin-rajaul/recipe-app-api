@@ -13,6 +13,7 @@ CREATE_USER_URL = reverse('user:create')
 
 def create_user(**params):
     """Create and return new user."""
+
     return get_user_model().objects.create_user(**params)
 
 
@@ -61,4 +62,3 @@ class PublicUserApiTests(TestCase):
             email=payload['email']
         ).exists()
         self.assertFalse(user_exists)
-
